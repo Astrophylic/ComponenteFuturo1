@@ -2,7 +2,7 @@
   <strong> COMPONENTE FUTURO </strong>
 </center>
 
-<center> ## Creación de un componente customizado para un futuro. </center>
+<center> <strong> Creación de un componente customizado para un futuro. </strong></center>
 
 **1. ¿Qué tipo de componente he creado?**
 
