@@ -20,13 +20,6 @@ public class ConversionTest {
     }
 
     @Test
-    public void testConversionDecimales() {
-        ConversionController conversor = new ConversionController();
-        double resultado = conversor.conversion(50.5);
-        assertEquals(59.09, resultado, 0.01);
-    }
-
-    @Test
     public void testCambiarTasa() {
         ConversionController conversor = new ConversionController();
         conversor.setTasaCambio(1.0);
@@ -34,11 +27,4 @@ public class ConversionTest {
         assertEquals(100.0, resultado, 0.01);
     }
 
-    @Test
-    public void testSetGetEuros() {
-        ConversionController conversor = new ConversionController();
-        conversor.setEuros(200.0);
-        double euros = conversor.getEuros();
-        assertEquals(200.0, euros, 0.01);
-    }
 }

@@ -1,9 +1,7 @@
 plugins {
     java
     application
-    id("org.javamodularity.moduleplugin") version "1.8.15"
     id("org.openjfx.javafxplugin") version "0.1.0"
-    id("org.beryx.jlink") version "3.1.4-rc"
 }
 
 group = "org.example"
@@ -13,22 +11,14 @@ repositories {
     mavenCentral()
 }
 
-val junitVersion = "5.10.2"
-
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(23)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
-tasks.withType<JavaCompile> {
-    options.encoding = "UTF-8"
-}
-
 application {
-    mainModule.set("org.example.componentefuturo")
-    mainClass.set("org.example.componentefuturo.ConversionApp")
-    applicationDefaultJvmArgs = listOf("--enable-native-access=javafx.graphics")
+    mainClass.set("org.example.componentefuturo.Launcher")
 }
 
 javafx {
@@ -37,11 +27,16 @@ javafx {
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    // JUnit 5 completo
+    testImplementation(platform("org.junit:junit-bom:5.10.2"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-tasks.withType<Test> {
+tasks.test {
     useJUnitPlatform()
+    testLogging {
+        events("passed", "failed", "skipped")
+        showStandardStreams = true
+    }
 }
-

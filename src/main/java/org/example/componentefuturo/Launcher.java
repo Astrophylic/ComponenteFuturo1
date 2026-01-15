@@ -8,4 +8,3 @@ public class Launcher {
             Application.launch(ConversionApp  .class, args);
         }
 }
-
