@@ -1,6 +1,6 @@
-<title> <center> 
+<center> 
   <strong> COMPONENTE FUTURO </strong>
-</center> </title>
+</center>
 
 <center> ## Creación de un componente customizado para un futuro. </center>
 
