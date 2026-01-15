@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" alignment="CENTER"
+      xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.componentefuturo.ConversionController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="-CONVERSIÓN EUROS A DÓLARES-"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Euros:" style="-fx-font-size: 15px;"/>
+        <TextField fx:id="txtEuros" prefWidth="120" promptText="0"/>
+    </HBox>
+
+    <Button fx:id="btnConvertir" text="Convertir"
+            style="-fx-font-size: 15px;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Dólares estadounidenses:" style="-fx-font-size: 15px;"/>
+        <Label fx:id="txtResultado" text="0"
+               style="-fx-font-size: 15px; -fx-text-fill: black;"/>
+    </HBox>
+</VBox>
