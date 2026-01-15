@@ -1,6 +1,7 @@
 <center> 
   <strong> COMPONENTE FUTURO </strong>
 </center>
+
 <br>
 <center> <strong> Creación de un componente customizado para un futuro. </strong></center>
 <br>
@@ -22,7 +23,7 @@ El componente que he creado, se trata de un componente de conversión de euros a
 **2.¿Cómo funciona este componente?**
 
 Este componente funciona de una forma  muy sencilla. Tan solo tenemos que introducir un importe(euros) en el campo de texto de la interfaz, y tras pulsar el botón de “conversión”, aparecerá un texto justo debajo con el importe convertido a dólares. A continuación, se muestra un ejemplo visual de cómo aparecería el componente en pantalla:
-Este componente contiene propiedades propias como (comprobar), eventos propios como “iniciarConversion()”, y animaciones propias como (queda por añadir).
+Este componente contiene propiedades propias y eventos propios como “conversion()”, en el que una vez pulsemos el respectivo botón, converitrá el importe introducido a dólares, y animaciones propias como "FadeTransition" , en el que cuando convertimos el importe a dólares, esta nueva tasa aparecerá con una transición de "fundido".
 
 **3.Incorporar el componente en nuestro proyecto.**
 
